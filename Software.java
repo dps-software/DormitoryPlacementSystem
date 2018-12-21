@@ -44,11 +44,11 @@ public class Software {
 		//System.out.println(registeredList.toString());
 	}
 	
-	public static void createPaymentList(int i){
-		System.out.println("The payment information for registered students: ");
-		paymentList = new ArrayList<>(registeredList);
-		paymentList.get(i).setPayment(randomPayment());
-		System.out.println(paymentList);
+	public  void createPaymentList(List<Student> obj){
+		for (int i=0; i<allStudents.size()/2;i++){
+			payment.addStudent(obj.get(i));
+			removeUnpaidStudents();
+		}
 	}
 	
 	public PaymentList removeUnpaidStudents(){ 
