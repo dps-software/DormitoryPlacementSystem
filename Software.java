@@ -19,16 +19,9 @@ public class Software {
 		createPaymentList(allStudents);
 		removeUnpaidStudents();
 		
-		//copyFromPaymentList();
-		
-		//takeFromReserveList();
-
-		
-		
 	}
 	
 	public static void main (String[] args) {
-		
 		
 		
 	}
@@ -43,11 +36,18 @@ public class Software {
 			allStudents.add(student);
 		}
 	}
+	
 	public static void createRegisteredStudents(List<Student> obj){
 		for (int i=0; i<allStudents.size()/2;i++){
 			registered.addStudent(obj.get(i));
 		}
 		
+	}
+	
+	public  void createReservedList(List<Student> obj){
+		for(int i = obj.size()/2; i<obj.size(); i++){
+			reserved.addStudent(obj.get(i));
+		}
 	}
 	
 	public  void createPaymentList(List<Student> obj){
@@ -67,17 +67,21 @@ public class Software {
 		return payment;
 	}
 	
-	public static void removeFromRegisteredList(){
-		//registeredList.clear();
-		for(int i = 0; i < paymentList.size(); i++){
-			registeredList.set(i, paymentList.get(i));
-		}
+	  public void copyFromPaymentList(){
+		registered.getRegisteredList().clear();
+		registered.getRegisteredList().addAll(payment.getPaymentList());
 	}
+    
+    public void takeFromReserveList(){
+    	
+    	int  count = 0;
+    	for(int i = registered.getRegisteredList().size(); i < 250; i++){
+    		registered.addStudent(reserved.reservedList.get(count));
+    		reserved.reservedList.get(count).setPayment(true);
+    		count++;
+    	}
+    }
 	
-	public  void createReservedList(List<Student> obj){
-		for(int i = obj.size()/2; i<obj.size(); i++){
-			reserved.addStudent(obj.get(i));
-		}
-	}
+	
 	
 }
