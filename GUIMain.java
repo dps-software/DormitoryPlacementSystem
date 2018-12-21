@@ -31,4 +31,7 @@ public class GUIMain {
 	mainPanel.add(button1);
 	mainPanel.add(button2);
 	mainPanel.add(button3);
+		
+	mainFrame.add(mainPanel);
+	mainFrame.setVisible(true);
 	
