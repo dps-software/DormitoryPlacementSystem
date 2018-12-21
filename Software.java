@@ -59,6 +59,9 @@ public class Software {
 		}
 	}
 	public static void createRegisteredStudents(List<Student> obj){
+		for (int i=0; i<allStudents.size()/2;i++){
+			registered.addStudent(obj.get(i));
+		}
 		
 	}
 	
