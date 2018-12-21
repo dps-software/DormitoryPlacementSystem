@@ -29,22 +29,7 @@ public class Software {
 	
 	public static void main (String[] args) {
 		
-		createAllStudents();
 		
-		for(int i = 0; i<250; i++){
-			createRegisteredStudents(i);
-			createPaymentList(i);
-			removeUnpaidStudents(i);
-			//System.out.println(paymentList);
-			removeFromRegisteredList();
-			
-			//registeredlisti payment liste eşitleme kısmı yok
-			
-			// ÇALIŞMIYO BURAYA TEKRAR BAKICAZ
-			
-			}
-		
-		createReservedList();
 		
 	}
 	
