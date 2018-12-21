@@ -8,5 +8,14 @@ public class ReservedList {
 		
 	}
 	
+	public List<Student> getReservedList(){
+		return reservedList;
+	}
+	
+	public void addStudent(Student student){
+		reservedList.add(student);
+		student.setPayment(false);
+	}
+	
 
 }
