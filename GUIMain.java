@@ -23,3 +23,7 @@ public class GUIMain {
 		
 	
 	JPanel mainPanel = new JPanel();
+		
+	JButton button1 = new JButton("Registered List");
+	JButton button2 = new JButton("Reserved List");
+	JButton button3 = new JButton("Payment List");
