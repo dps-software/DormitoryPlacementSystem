@@ -17,5 +17,14 @@ public class ReservedList {
 		student.setPayment(false);
 	}
 	
+	public void listReserved(){
+		String total = "\nStudents reserved information:\n";
+		
+		for(int i =0; i<reservedList.size(); i++){
+			total += reservedList.get(i) + "\n";
+		}
+		System.out.println(total);
+	}
+	
 
 }
