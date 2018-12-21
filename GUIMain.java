@@ -32,6 +32,8 @@ public class GUIMain {
 	mainPanel.add(button2);
 	mainPanel.add(button3);
 		
+		//object eklenecek!!!
+		
 	mainFrame.add(mainPanel);
 	mainFrame.setVisible(true);
 	
