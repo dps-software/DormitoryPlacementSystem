@@ -5,9 +5,27 @@ import java.util.Random;
 
 public class Software {
 	static List<Student> allStudents = new ArrayList<>();
-	static List<Student> registeredList = new ArrayList<>();
-	static List<Student> reserveList = new ArrayList<>();
-	static List<Student> paymentList;
+	
+	public static RegisteredList registered = new RegisteredList();
+	public static PaymentList payment = new PaymentList();
+	public static ReservedList reserved = new ReservedList();
+	public static RandomG r = new RandomG();
+	
+	
+	public Software() {
+		createAllStudents();
+		createRegisteredStudents(allStudents);
+		createReservedList(allStudents);
+		createPaymentList(allStudents);
+		removeUnpaidStudents();
+		
+		//copyFromPaymentList();
+		
+		//takeFromReserveList();
+
+		
+		
+	}
 	
 	public static void main (String[] args) {
 		
