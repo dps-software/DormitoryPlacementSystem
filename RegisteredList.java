@@ -8,4 +8,8 @@ public class RegisteredList {
 		
 	}
 	
+	public void addStudent(Student student){
+		registeredList.add(student);
+	}
+	
 }
