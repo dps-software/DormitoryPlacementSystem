@@ -58,10 +58,8 @@ public class Software {
 			allStudents.add(student);
 		}
 	}
-	public static void createRegisteredStudents(int i){
-		//System.out.println("These are all the students who has a room :");
-		registeredList.add(allStudents.get(i));
-		//System.out.println(registeredList.toString());
+	public static void createRegisteredStudents(List<Student> obj){
+		
 	}
 	
 	public  void createPaymentList(List<Student> obj){
