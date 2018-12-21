@@ -68,9 +68,9 @@ public class Software {
 		}
 	}
 	
-	public static void createReservedList(){
-		for(int i = 250; i<500; i++){
-			reserveList.add(allStudents.get(i));
+	public  void createReservedList(List<Student> obj){
+		for(int i = obj.size()/2; i<obj.size(); i++){
+			reserved.addStudent(obj.get(i));
 		}
 	}
 	
