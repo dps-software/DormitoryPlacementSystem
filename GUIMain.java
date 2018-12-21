@@ -77,6 +77,14 @@ public class GUIMain {
 			mainFrame.revalidate();
 			
 		}
+		});
 		
-	});
+		button2.addActionListener(new ActionListener(){
+		
+		
+		
+		
+		});
+		
+		
 	
