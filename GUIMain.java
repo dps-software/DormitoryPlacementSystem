@@ -103,6 +103,7 @@ public class GUIMain {
 			mainFrame.revalidate();
 		
 		} 
+	});
 			
 	       JButton export = new JButton("Export");
 	
