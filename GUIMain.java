@@ -83,7 +83,10 @@ public class GUIMain {
 		
 			@Override
 		public void actionPerformed(ActionEvent e) {
-		
+		   List<Student> studentList = reservedList.reservedList;
+			
+			String[] cols = {"Name", "Age", "Home City"};
+			String[][] data = new String[studentList.size()][3];
 		
 		}
 		});
