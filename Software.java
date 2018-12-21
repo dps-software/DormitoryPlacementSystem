@@ -48,14 +48,16 @@ public class Software {
 		
 	}
 	
-	public static void createAllStudents(){
-		//System.out.println("These are all the students who consult to DPS:");
+	public void createAllStudents(){
 		for (int i=0;i<500;i++) {
-			Student student = new Student(createRandomName(), generateAge(), generateCity());
+			Student student = new Student("", 0, "");
+			student.setStudentName(r.createRandomName());
+			student.setAge(r.generateAge());
+			student.setHomeCity(r.generateCity());
+			student.setPayment(r.randomPayment());
 			allStudents.add(student);
 		}
 	}
-	
 	public static void createRegisteredStudents(int i){
 		//System.out.println("These are all the students who has a room :");
 		registeredList.add(allStudents.get(i));
