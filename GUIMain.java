@@ -102,7 +102,32 @@ public class GUIMain {
 			mainPanel.add(scrollPane);
 			mainFrame.revalidate();
 		
-		}
+		} 
+			
+	       JButton export = new JButton("Export");
+	
+
+	       button3.addActionListener(new ActionListener(){
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			mainPanel.removeAll();
+			mainPanel.add(button1);
+			mainPanel.add(button2);
+			mainPanel.add(button3);
+			
+			List<Student> studentList = paymentList.paymentList;
+				
+			String[] cols = {"Name", "Payment"};
+			String[][] data = new String[studentList.size()][2];
+			for(int i=0; i<studentList.size(); i++) {
+				String[] row = new String[2];
+				row[0] = studentList.get(i).getStudentName();
+				row[1]= String.valueOf(studentList.get(i).getPayment());
+				
+				data[i] = row;
+			}
 		});
 		
 		
