@@ -1,16 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class PaymentList {
-	//registered listi alsın ödemeyenleri çıkartsın listeyi update etsin
+	
+	public List <Student> paymentList = new ArrayList<Student>();
+
 	public PaymentList(){
-		
 	}
 	
-	public void removeUnpaid(){
-		
+	public List<Student> getPaymentList(){
+		return paymentList;
 	}
 	
-	public void updateList(){
-		
+	public void addStudent(Student student){
+		paymentList.add(student);
+	}
+	
+	public void removeStudent(Student student){
+		paymentList.remove(student);
 	}
 	
 	
