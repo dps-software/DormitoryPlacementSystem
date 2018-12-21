@@ -20,3 +20,6 @@ public class GUIMain {
 	JFrame mainFrame = new JFrame("DPS");
 	mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	mainFrame.setSize(800,600);
+		
+	
+	JPanel mainPanel = new JPanel();
