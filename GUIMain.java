@@ -98,6 +98,9 @@ public class GUIMain {
 			}
 			JTable table = new JTable(data, cols);
 			JScrollPane scrollPane = new JScrollPane(table);
+			
+			mainPanel.add(scrollPane);
+			mainFrame.revalidate();
 		
 		}
 		});
