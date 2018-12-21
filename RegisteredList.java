@@ -12,4 +12,8 @@ public class RegisteredList {
 		registeredList.add(student);
 	}
 	
+	public void removeStudent(Student student){
+		registeredList.remove(student);
+	}
+	
 }
