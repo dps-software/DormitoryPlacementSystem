@@ -30,7 +30,7 @@ public class Software {
 		
 	}
 	
-	private static void createAllStudents(){
+	public static void createAllStudents(){
 		//System.out.println("These are all the students who consult to DPS:");
 		for (int i=0;i<500;i++) {
 			Student student = new Student(createRandomName(), generateAge(), generateCity());
@@ -38,41 +38,43 @@ public class Software {
 		}
 	}
 	
-	private static void createRegisteredStudents(int i){
+	public static void createRegisteredStudents(int i){
 		//System.out.println("These are all the students who has a room :");
 		registeredList.add(allStudents.get(i));
 		//System.out.println(registeredList.toString());
 	}
 	
-	private static void createPaymentList(int i){
+	public static void createPaymentList(int i){
 		System.out.println("The payment information for registered students: ");
 		paymentList = new ArrayList<>(registeredList);
 		paymentList.get(i).setPayment(randomPayment());
 		System.out.println(paymentList);
 	}
 	
-	private static List<Student> removeUnpaidStudents(int i){ //ÇALIŞMIYOR
+	public PaymentList removeUnpaidStudents(){ 
+		for(int j = 0; j<payment.getPaymentList().size(); j++){
+			if(payment.getPaymentList().get(j).getPayment() == false){
+				payment.removeStudent(payment.getPaymentList().get(j));
+			} 
+		}
 		
-		if(!paymentList.get(i).getPayment()){
-			paymentList.remove(i);
-		} 
-		return paymentList;
+		return payment;
 	}
 	
-	private static void removeFromRegisteredList(){
+	public static void removeFromRegisteredList(){
 		//registeredList.clear();
 		for(int i = 0; i < paymentList.size(); i++){
 			registeredList.set(i, paymentList.get(i));
 		}
 	}
 	
-	private static void createReservedList(){
+	public static void createReservedList(){
 		for(int i = 250; i<500; i++){
 			reserveList.add(allStudents.get(i));
 		}
 	}
 	
-	private static String createRandomName() {
+	public static String createRandomName() {
 		String[] firstNames = { "Ali", "Ayse", "Ahmet", "Mehmet", "Mustafa", "Gizem", "Sibel", "Burak", "Bahar" };
 		String[] lastNames = { "Yilmaz", "Caliskan", "Korkmaz", "Kaya", "Akar", "Sonmez", "Celikoglu" };
 
@@ -86,7 +88,7 @@ public class Software {
 
 	}
 	
-	private static String generateCity() {
+	public static String generateCity() {
 		String[] cities = {"Istanbul", "Ankara", "Izmir", "Antalya", "Bursa", "Edirne"};
 		
 		Random random = new Random();
@@ -96,7 +98,7 @@ public class Software {
 		return city;
 	}
 	
-	private static int generateAge() {
+	public static int generateAge() {
 		int[] ages = new int[5];
 		ages[0] = 18;
 		ages[1] = 19;
@@ -111,7 +113,7 @@ public class Software {
 		return age;
 	}
 	
-	private static boolean randomPayment(){
+	public static boolean randomPayment(){
 		boolean payment = false;
 		
 		Random random = new Random();
