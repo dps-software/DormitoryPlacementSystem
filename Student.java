@@ -19,6 +19,10 @@ public class Student {
 		this.payment = payment;
 	}
 	
+	public void setStudentName(String name){
+		this.studentName = name;
+	}
+	
 	public String getStudentName() {
 		return studentName;
 	}
