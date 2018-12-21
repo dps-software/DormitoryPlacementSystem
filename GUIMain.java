@@ -27,3 +27,8 @@ public class GUIMain {
 	JButton button1 = new JButton("Registered List");
 	JButton button2 = new JButton("Reserved List");
 	JButton button3 = new JButton("Payment List");
+
+	mainPanel.add(button1);
+	mainPanel.add(button2);
+	mainPanel.add(button3);
+	
