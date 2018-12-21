@@ -94,9 +94,10 @@ public class GUIMain {
 				row[1]= String.valueOf(studentList.get(i).getAge());
 				row[2] = studentList.get(i).getHomeCity();
 				
-				
 				data[i] = row;
 			}
+			JTable table = new JTable(data, cols);
+			JScrollPane scrollPane = new JScrollPane(table);
 		
 		}
 		});
