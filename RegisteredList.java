@@ -19,4 +19,13 @@ public class RegisteredList {
 		return registeredList;
 	}
 	
+	public void listRegistered(){
+		String total = "\nStudents registered information:\n";
+		
+		for(int i =0; i<registeredList.size(); i++){
+			total += registeredList.get(i) + "\n";
+		}
+		System.out.println(total);
+	}
+	
 }
