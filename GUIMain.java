@@ -87,6 +87,16 @@ public class GUIMain {
 			
 			String[] cols = {"Name", "Age", "Home City"};
 			String[][] data = new String[studentList.size()][3];
+			
+			for(int i=0; i<studentList.size(); i++) {
+				String[] row = new String[3];
+				row[0] = studentList.get(i).getStudentName();
+				row[1]= String.valueOf(studentList.get(i).getAge());
+				row[2] = studentList.get(i).getHomeCity();
+				
+				
+				data[i] = row;
+			}
 		
 		}
 		});
