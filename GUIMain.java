@@ -131,5 +131,15 @@ public class GUIMain {
 			}
 		});
 		
+		       export.addActionListener(new ActionListener(){
+		      
+			@Override
+		        public void actionPerformed(ActionEvent e) {
+			
+		        software.copyFromPaymentList();
+			
+        }
+		
+	});
 		
 	
