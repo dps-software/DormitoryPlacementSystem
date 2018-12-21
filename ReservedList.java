@@ -2,9 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReservedList {
-	List<Student> reservedList;
+	List<Student> reservedList = new ArrayList<Student>();
+	
 	public ReservedList(){
-		reservedList = new ArrayList<Student>(250);
+		
 	}
 	
 
