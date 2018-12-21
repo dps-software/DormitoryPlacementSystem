@@ -28,3 +28,29 @@ public class RandomG{
 		
 		return city;
 	}
+
+	public int generateAge() {
+		int[] ages = new int[5];
+		ages[0] = 18;
+		ages[1] = 19;
+		ages[2] = 20;
+		ages[3] = 21;
+		ages[4] = 22;
+										
+		Random random = new Random();
+		
+		int age = ages[random.nextInt(ages.length)];
+		
+		return age;
+	}
+	
+	public boolean randomPayment(){
+		boolean payment = false;
+		
+		Random random = new Random();
+		payment = random.nextBoolean();
+		return payment;
+	}
+	
+
+}
