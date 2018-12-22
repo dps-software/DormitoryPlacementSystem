@@ -1,3 +1,4 @@
+import java.util.Comparator;
 
 public class Student {
 	private String studentName;
@@ -57,5 +58,14 @@ public class Student {
 	            "HomeCity: " + getHomeCity() +"\n"+ 
 	            "Payment: " + getPayment()+"\n");
 	}
+	
+	public static Comparator<Student> StuPointComparator = new Comparator <Student>() {
+		public int compare (Student s1, Student s2) {
+			int StudentPoint1 = s1.getPoint();
+			int StudentPoint2 = s2.getPoint();
+			
+			return StudentPoint2- StudentPoint1;
+		}
+	};   
 
 }
