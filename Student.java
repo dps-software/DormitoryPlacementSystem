@@ -5,6 +5,7 @@ public class Student {
 	private int age;
 	private String homeCity;
 	private boolean payment;
+	private int point;
 	private int roomnumber;
 	
 	public Student (String studentName, int age, String homeCity) {
@@ -12,6 +13,7 @@ public class Student {
 		this.age = age;
 		this.homeCity = homeCity;
 		payment = false;
+		point = 0;
 	}
 	
 	public Student (String studentName, int age, String homeCity, boolean payment) {
@@ -51,6 +53,14 @@ public class Student {
 	
 	public void setPayment(boolean payment){
 		this.payment = payment;
+	}
+	
+	public int getPoint() {
+		return point;
+	}
+
+	public void setPoint(int point) {
+		this.point = point;
 	}
 	
 	public int getRoomNumber() {
