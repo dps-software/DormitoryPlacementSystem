@@ -18,6 +18,7 @@ public class Software {
 		Collections.sort(allStudents, Student.StuPointComparator);
 		
 		createRegisteredStudents(allStudents);
+		giveroomnumber(registered.getRegisteredList());
 		
 		createReservedList(allStudents);
 		
@@ -47,6 +48,13 @@ public class Software {
 			registered.addStudent(obj.get(i));
 		}
 		
+	}
+	
+	public  void giveroomnumber (List<Student> obj){
+		for (int i=0; i<obj.size();i++){
+			obj.get(i).setRoomNumber(i+1);;
+		}
+			
 	}
 	
 	public  void createReservedList(List<Student> obj){
