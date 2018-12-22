@@ -18,12 +18,11 @@ public class Software {
 		Collections.sort(allStudents, Student.StuPointComparator);
 		
 		createRegisteredStudents(allStudents);
-		giveroomnumber(registered.getRegisteredList());
-		
 		createReservedList(allStudents);
-		
 		createPaymentList(allStudents);
 		removeUnpaidStudents();
+		giveroomnumber(registered.getRegisteredList());
+		
 		
 	}
 	
@@ -64,7 +63,7 @@ public class Software {
 	}
 	
 	public  void createPaymentList(List<Student> obj){
-		for (int i=0; i<allStudents.size()/2;i++){
+		for (int i=0; i<obj.size();i++){
 			payment.addStudent(obj.get(i));
 			removeUnpaidStudents();
 		}
@@ -85,15 +84,18 @@ public class Software {
 		registered.getRegisteredList().addAll(payment.getPaymentList());
 	}
     
-        public void takeFromReserveList(){
+      public void takeFromReserveList(){
     	
     	int  count = 0;
     	for(int i = registered.getRegisteredList().size(); i < 250; i++){
-    		registered.addStudent(reserved.reservedList.get(count));
     		reserved.reservedList.get(count).setPayment(true);
+    		registered.addStudent(reserved.reservedList.get(count));
     		count++;
     	}
-        }
+    	for(int j =0;j <count; j++) {
+    		reserved.removeStudent(reserved.reservedList.get(0));
+    	}
+    }
 	
 	public void addPoints(List<Student> list) {  
 		  for (int i=0;i<list.size();i++) {
