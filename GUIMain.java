@@ -86,6 +86,12 @@ public class GUIMain {
 		
 			@Override
 		public void actionPerformed(ActionEvent e) {
+			
+		        mainPanel.removeAll();
+			mainPanel.add(button1);
+			mainPanel.add(button2);
+			mainPanel.add(button3);
+			
 		   List<Student> studentList = reservedList.reservedList;
 			
 			String[] cols = {"Name", "Age", "Home City", "Point"};
@@ -140,6 +146,7 @@ public class GUIMain {
 			software.giveroomnumber(studentList);
 			mainPanel.add(scrollPane);
 			mainFrame.revalidate();
+		}
 			
 		});
 		       
