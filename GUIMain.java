@@ -55,13 +55,16 @@ public class GUIMain {
 			
 			List<Student> studentList = registeredList.registeredList;
 			
-			String[] cols = {"Name", "Age", "Home City"};
-			String[][] data = new String[studentList.size()][3];
+			String[] cols = {"Room Number", "Name", "Age", "Home City", "Point"};
+			String[][] data = new String[studentList.size()][5];
 			for(int i=0; i<studentList.size(); i++) {
-				String[] row = new String[3];
-				row[0] = studentList.get(i).getStudentName();
-				row[1]= String.valueOf(studentList.get(i).getAge());
-				row[2] = studentList.get(i).getHomeCity();
+				String[] row = new String[5];
+				row[0]=  String.valueOf(studentList.get(i).getRoomNumber());
+				row[1] = studentList.get(i).getStudentName();
+				row[2]=  String.valueOf(studentList.get(i).getAge());
+				row[3] = studentList.get(i).getHomeCity();
+				row[4] = String.valueOf(studentList.get(i).getPoint());
+				
 				
 				
 				data[i] = row;
@@ -129,7 +132,23 @@ public class GUIMain {
 				
 				data[i] = row;
 			}
+			JTable table = new JTable(data, cols);
+			JScrollPane scrollPane = new JScrollPane(table);
+			
+			mainPanel.add(export);
+			
+			software.giveroomnumber(studentList);
+			mainPanel.add(scrollPane);
+			mainFrame.revalidate();
+			
 		});
+		       
+		       
+		       
+		       
+		       
+		       
+		       
 		
 		       export.addActionListener(new ActionListener(){
 		      
@@ -155,15 +174,18 @@ public class GUIMain {
 			mainPanel.add(button3);
 			
 			List<Student> studentList = registeredList.registeredList;
+			software.giveroomnumber(studentList);
 			
-			String[] cols = {"Name", "Age", "Home City", "Point"};
-			String[][] data = new String[studentList.size()][4];
+			String[] cols = {"Room Number", "Name", "Age", "Home City", "Point"};
+			String[][] data = new String[studentList.size()][5];
 			for(int i=0; i<studentList.size(); i++) {
-				String[] row = new String[4];
-				row[0] = studentList.get(i).getStudentName();
-				row[1]=  String.valueOf(studentList.get(i).getAge());
-				row[2] = studentList.get(i).getHomeCity();
-				row[3] = String.valueOf(studentList.get(i).getPoint());
+				String[] row = new String[5];
+				row[0]=  String.valueOf(studentList.get(i).getRoomNumber());
+				row[1] = studentList.get(i).getStudentName();
+				row[2]=  String.valueOf(studentList.get(i).getAge());
+				row[3] = studentList.get(i).getHomeCity();
+				row[4] = String.valueOf(studentList.get(i).getPoint());
+				
 				
 				
 				data[i] = row;
