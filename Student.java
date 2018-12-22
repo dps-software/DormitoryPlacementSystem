@@ -5,6 +5,7 @@ public class Student {
 	private int age;
 	private String homeCity;
 	private boolean payment;
+	private int roomnumber;
 	
 	public Student (String studentName, int age, String homeCity) {
 		this.studentName = studentName;
@@ -50,6 +51,14 @@ public class Student {
 	
 	public void setPayment(boolean payment){
 		this.payment = payment;
+	}
+	
+	public int getRoomNumber() {
+		return roomnumber;
+	}
+	
+	public void setRoomNumber(int roomnumber){
+		this.roomnumber = roomnumber;
 	}
 	
 	public String toString(){
