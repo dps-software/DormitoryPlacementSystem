@@ -16,6 +16,9 @@ public class ReservedList {
 		reservedList.add(student);
 		student.setPayment(false);
 	}
+	public void removeStudent(Student student){
+		reservedList.remove(student);
+	}
 	
 	public void listReserved(){
 		String total = "\nStudents reserved information:\n";
