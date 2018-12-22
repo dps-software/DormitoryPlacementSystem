@@ -79,6 +79,15 @@ public class Software {
 		return payment;
 	}
 	
+	public void removeUnpaidStudentsbyRegistered(){ 
+		payment.getPaymentList().clear();
+		for(int j = 0; j<registered.getRegisteredList().size(); j++){
+			if(registered.getRegisteredList().get(j).getPayment() == true){
+				payment.addStudent(registered.getRegisteredList().get(j));
+			} 
+		}
+	}
+	
 	 public void copyFromPaymentList(){
 		registered.getRegisteredList().clear();
 		registered.getRegisteredList().addAll(payment.getPaymentList());
