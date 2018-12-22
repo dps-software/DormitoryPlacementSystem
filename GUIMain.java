@@ -149,6 +149,36 @@ public class GUIMain {
 			
 			software.takeFromReserveList();
 			
+			mainPanel.removeAll();
+			mainPanel.add(button1);
+			mainPanel.add(button2);
+			mainPanel.add(button3);
+			
+			List<Student> studentList = registeredList.registeredList;
+			
+			String[] cols = {"Name", "Age", "Home City", "Point"};
+			String[][] data = new String[studentList.size()][4];
+			for(int i=0; i<studentList.size(); i++) {
+				String[] row = new String[4];
+				row[0] = studentList.get(i).getStudentName();
+				row[1]=  String.valueOf(studentList.get(i).getAge());
+				row[2] = studentList.get(i).getHomeCity();
+				row[3] = String.valueOf(studentList.get(i).getPoint());
+				
+				
+				data[i] = row;
+			}
+			
+			JTable table = new JTable(data, cols);
+			JScrollPane scrollPane = new JScrollPane(table);
+			
+			mainPanel.add(takefromreserve);
+		
+			
+			mainPanel.add(scrollPane);
+			
+			
+			mainFrame.revalidate();
          
 		}
 		
