@@ -14,8 +14,13 @@ public class Software {
 	
 	public Software() {
 		createAllStudents();
+		addPoints(allStudents);
+		Collections.sort(allStudents, Student.StuPointComparator);
+		
 		createRegisteredStudents(allStudents);
+		
 		createReservedList(allStudents);
+		
 		createPaymentList(allStudents);
 		removeUnpaidStudents();
 		
@@ -67,12 +72,12 @@ public class Software {
 		return payment;
 	}
 	
-	  public void copyFromPaymentList(){
+	 public void copyFromPaymentList(){
 		registered.getRegisteredList().clear();
 		registered.getRegisteredList().addAll(payment.getPaymentList());
 	}
     
-    public void takeFromReserveList(){
+        public void takeFromReserveList(){
     	
     	int  count = 0;
     	for(int i = registered.getRegisteredList().size(); i < 250; i++){
@@ -80,7 +85,30 @@ public class Software {
     		reserved.reservedList.get(count).setPayment(true);
     		count++;
     	}
-    }
+        }
+	
+	public void addPoints(List<Student> list) {  
+		  for (int i=0;i<list.size();i++) {
+			  if(list.get(i).getHomeCity().equals("Istanbul")) {
+				  list.get(i).setPoint(list.get(i).getPoint()+1);
+			  }else list.get(i).setPoint(list.get(i).getPoint()+2);
+		  }
+		 
+		  for (int i=0;i<list.size();i++) {
+			  if(list.get(i).getAge() == 18) {
+				  list.get(i).setPoint(list.get(i).getPoint()+5);
+			  }else if (list.get(i).getAge() == 19) {
+				  list.get(i).setPoint(list.get(i).getPoint()+4);
+			  }else if (list.get(i).getAge() == 20) {
+				  list.get(i).setPoint(list.get(i).getPoint()+3);
+			  }else if (list.get(i).getAge() == 21) {
+				  list.get(i).setPoint(list.get(i).getPoint()+2);
+			  }else list.get(i).setPoint(list.get(i).getPoint()+1);
+		  }
+		 
+	  } 
+	
+	
 	
 	
 	
