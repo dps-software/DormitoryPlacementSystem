@@ -166,7 +166,10 @@ public class GUIMain {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
+			
 			software.takeFromReserveList();
+			software.removeUnpaidStudentsbyRegistered();
+			
 			
 			mainPanel.removeAll();
 			mainPanel.add(button1);
