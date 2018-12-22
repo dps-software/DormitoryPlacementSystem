@@ -88,14 +88,14 @@ public class GUIMain {
 		public void actionPerformed(ActionEvent e) {
 		   List<Student> studentList = reservedList.reservedList;
 			
-			String[] cols = {"Name", "Age", "Home City"};
-			String[][] data = new String[studentList.size()][3];
-			
+			String[] cols = {"Name", "Age", "Home City", "Point"};
+			String[][] data = new String[studentList.size()][4];
 			for(int i=0; i<studentList.size(); i++) {
-				String[] row = new String[3];
+				String[] row = new String[4];
 				row[0] = studentList.get(i).getStudentName();
 				row[1]= String.valueOf(studentList.get(i).getAge());
 				row[2] = studentList.get(i).getHomeCity();
+				row[3] = String.valueOf(studentList.get(i).getPoint());
 				
 				data[i] = row;
 			}
